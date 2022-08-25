@@ -1,15 +1,15 @@
 package main
 
+import "sort"
+
 // leetcode submit region begin(Prohibit modification and deletion)
-func removeElement(nums []int, val int) int {
-	left := 0
-	for _, v := range nums {
-		if v != val {
-			nums[left] = v
-			left++
-		}
+func merge(nums1 []int, m int, nums2 []int, n int) {
+	for range nums2 {
+		nums1[m] = nums2[n-1]
+		m++
+		n--
 	}
-	return left
+	sort.Ints(nums1)
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
