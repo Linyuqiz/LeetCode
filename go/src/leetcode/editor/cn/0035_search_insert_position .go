@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("35、search_insert_position")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func searchInsert(nums []int, target int) int {
 	left, right := 0, len(nums)-1

@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("136、single_number")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func singleNumber(nums []int) int {
 	number := 0

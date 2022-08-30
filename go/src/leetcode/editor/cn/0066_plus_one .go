@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("66、plus_one")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func plusOne(digits []int) []int {
 	number := 1

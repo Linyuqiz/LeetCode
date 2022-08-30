@@ -2,6 +2,10 @@ package main
 
 import "sort"
 
+func main() {
+	println("170、two_sum_iii_data_structure_design")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 type TwoSum struct {
 	data   []int

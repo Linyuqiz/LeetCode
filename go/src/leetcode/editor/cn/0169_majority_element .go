@@ -2,6 +2,10 @@ package main
 
 import "sort"
 
+func main() {
+	println("169、majority_element")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func majorityElement(nums []int) int {
 	sort.Ints(nums)

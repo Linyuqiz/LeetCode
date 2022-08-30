@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("121、best_time_to_buy_and_sell_stock")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func maxProfit(prices []int) int {
 	res, minValue := 0, prices[0]

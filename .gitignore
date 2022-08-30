@@ -16,4 +16,10 @@
 
 .idea
 
-go/leetcode/editor/cn/doc
+go/src/leetcode/editor/cn/doc
+rust/src/leetcode/editor/cn/doc
+
+# Added by cargo
+
+rust/target
+rust/Cargo.lock

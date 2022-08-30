@@ -2,7 +2,4 @@
 
 ## Introduction
 
-### Plugin Settings
-
-![img](go/leetcode/img/setting.png)
-
+Leetcode's settings for Leetcode Plugin.

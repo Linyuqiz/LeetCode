@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("26、remove_duplicates_from_sorted_array")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func removeDuplicates(nums []int) int {
 	left := 1

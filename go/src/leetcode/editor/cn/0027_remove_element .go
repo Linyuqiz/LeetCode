@@ -1,15 +1,19 @@
 package main
 
+func main() {
+	println("27、remove_element")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
-func containsDuplicate(nums []int) bool {
-	hash := make(map[int]bool, 0)
+func removeElement(nums []int, val int) int {
+	left := 0
 	for _, v := range nums {
-		if _, ok := hash[v]; ok {
-			return true
+		if v != val {
+			nums[left] = v
+			left++
 		}
-		hash[v] = true
 	}
-	return false
+	return left
 }
 
 //leetcode submit region end(Prohibit modification and deletion)

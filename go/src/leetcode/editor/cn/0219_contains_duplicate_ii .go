@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("219、contains_duplicate_ii")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func containsNearbyDuplicate(nums []int, k int) bool {
 	hash := make(map[int]int, 0)

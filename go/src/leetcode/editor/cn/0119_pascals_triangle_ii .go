@@ -1,5 +1,9 @@
 package main
 
+func main() {
+	println("119、pascals_triangle_ii")
+}
+
 // leetcode submit region begin(Prohibit modification and deletion)
 func getRow(rowIndex int) []int {
 	// 1  3  3  1
