@@ -1,15 +1,14 @@
 package main
 
 import (
-	"sort"
 	"strconv"
 )
 
 // leetcode submit region begin(Prohibit modification and deletion)
 func findMissingRanges(nums []int, lower int, upper int) []string {
 	res := make([]string, 0)
-	nums = append(nums, lower, upper)
-	sort.Ints(nums)
+	nums = append([]int{lower - 1}, nums...)
+	nums = append(nums, upper+1)
 	for i := 1; i < len(nums); i++ {
 		value := nums[i] - nums[i-1]
 		if value == 2 {
