@@ -4,8 +4,5 @@
 
 ### Plugin Settings
 
-![img](./leetcode/img/setting.png)
+![img](go/leetcode/img/setting.png)
 
-## Question Topic Sort
-
-- Array
