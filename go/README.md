@@ -5,7 +5,7 @@
 
 ### Topic Commands
 ```shell
-$!velocityTool.leftPadZeros(${question.frontendQuestionId},4)_$!velocityTool.snakeCaseName(${question.titleSlug}) 
+$!velocityTool.leftPadZeros(${question.frontendQuestionId},4)_$!velocityTool.snakeCaseName(${question.titleSlug})
 ```
 
 ### Content Commands
