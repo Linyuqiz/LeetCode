@@ -16,6 +16,13 @@ struct Solution;
 impl Solution {
     #[allow(dead_code)]
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut hash = std::collections::HashMap::<i32, i32>::new();
+        for (i, num) in nums.iter().enumerate() {
+            if hash.contains_key(num) {
+                return vec![*hash.get(num).unwrap(), i as i32];
+            }
+            hash.insert(target - *num, i as i32);
+        }
         return vec![];
     }
 }
