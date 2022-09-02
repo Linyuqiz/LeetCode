@@ -16,9 +16,21 @@ struct Solution;
 impl Solution {
     #[allow(dead_code)]
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
+        let (mut left, mut right) = (1, 1);
+        while right < nums.len() {
+            if nums[right - 1] != nums[right] {
+                nums[left] = nums[right];
+                left += 1;
+            }
+            right += 1;
+        }
+        return left as i32;
+    }
+
+    #[allow(dead_code)]
+    pub fn remove_duplicates0(nums: &mut Vec<i32>) -> i32 {
         nums.dedup(); // 去除相邻间的重复元素
         nums.len() as i32
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
-
