@@ -22,7 +22,7 @@ impl Solution {
         while left < nums1.len() && right < nums2.len() {
             let (x, y) = (nums1[left], nums2[right]);
             if x == y {
-                res.insert(res.len(), x);
+                res.push(x);
                 left += 1;
                 right += 1;
             } else if x < y {

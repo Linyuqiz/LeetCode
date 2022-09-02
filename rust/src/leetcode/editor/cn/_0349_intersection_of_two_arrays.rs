@@ -23,7 +23,7 @@ impl Solution {
             let (x, y) = (nums1[left], nums2[right]);
             if x == y {
                 if res.len() == 0 || x > res[res.len() - 1] {
-                    res.insert(res.len(), x);
+                    res.push(x);
                 }
                 left += 1;
                 right += 1;

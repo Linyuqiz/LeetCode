@@ -3,7 +3,18 @@ mod _0001_two_sum;
 mod _0026_remove_duplicates_from_sorted_array;
 mod _0027_remove_element;
 mod _0035_search_insert_position;
+mod _0066_plus_one;
+mod _0088_merge_sorted_array;
 
+mod _0217_contains_duplicate;
+mod _0219_contains_duplicate_ii;
+mod _0228_summary_ranges;
+mod _0243_shortest_word_distance;
+mod _0252_meeting_rooms;
+mod _0268_missing_number;
+mod _0283_move_zeroes;
+mod _0303_range_sum_query_immutable;
+mod _0346_moving_average_from_data_stream;
 mod _0349_intersection_of_two_arrays;
 mod _0350_intersection_of_two_arrays_ii;
 mod _0414_third_maximum_number;
