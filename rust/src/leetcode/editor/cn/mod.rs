@@ -5,7 +5,14 @@ mod _0027_remove_element;
 mod _0035_search_insert_position;
 mod _0066_plus_one;
 mod _0088_merge_sorted_array;
-
+mod _0108_convert_sorted_array_to_binary_search_tree;
+mod _0118_pascals_triangle;
+mod _0119_pascals_triangle_ii;
+mod _0121_best_time_to_buy_and_sell_stock;
+mod _0136_single_number;
+mod _0163_missing_ranges;
+mod _0169_majority_element;
+mod _0170_two_sum_iii_data_structure_design;
 mod _0217_contains_duplicate;
 mod _0219_contains_duplicate_ii;
 mod _0228_summary_ranges;
