@@ -1,4 +1,5 @@
-mod leetcode;
+#[path = "./leetcode/editor/cn/mod.rs"]
+mod questions;
 
 // 用于处理文档错误展示的代码段
 #[allow(dead_code)]
@@ -6,27 +7,37 @@ const PLACEHOLDER: &str = "";
 
 #[allow(dead_code)]
 fn main() {
-    println!("leetcode");
+    println!("leetcode go! keep learning!");
 }
+
+#[allow(dead_code)]
+const GO_FILE_SUFFIX: &str = ".go";
+#[allow(dead_code)]
+const RUST_FILE_SUFFIX: &str = ".rs";
+#[allow(dead_code)]
+const GO_PATH: &str = "/Users/axemc/Extensions/LeetCode/go/src/leetcode/editor/cn";
+#[allow(dead_code)]
+const RUST_PATH: &str = "/Users/axemc/Extensions/LeetCode/rust/src/leetcode/editor/cn";
+#[allow(dead_code)]
+const EXCLUDE_FILES: [&str; 2] = [".DS_Store", "mod.rs"];
 
 #[test]
 fn diff_file() {
-    let (go_file_suffix, rust_file_suffix) = (".go", ".rs");
     let (files, mut go_total, mut rust_total, mut sync_total) = (collect_diff_files(), 0, 0, 0);
     for v in files.iter() {
         let v = v.to_string();
-        if v.ends_with(go_file_suffix) {
+        if v.ends_with(GO_FILE_SUFFIX) {
             go_total += 1;
-            if !files.contains(&("_".to_owned() + &*v.replace(go_file_suffix, rust_file_suffix))) {
+            if !files.contains(&("_".to_owned() + &*v.replace(GO_FILE_SUFFIX, RUST_FILE_SUFFIX))) {
                 sync_total += 1;
                 println!("Rust: {:?}", v)
             }
         }
-        if v.ends_with(rust_file_suffix) {
+        if v.ends_with(RUST_FILE_SUFFIX) {
             rust_total += 1;
             if !files.contains(
                 &(v.replacen("_", "", 1)
-                    .replace(rust_file_suffix, go_file_suffix)),
+                    .replace(RUST_FILE_SUFFIX, GO_FILE_SUFFIX)),
             ) {
                 sync_total += 1;
                 println!("Go: {:?}", v)
@@ -41,18 +52,13 @@ fn diff_file() {
 
 #[allow(dead_code)]
 fn collect_diff_files() -> Vec<String> {
-    let (go_path, rust_path) = (
-        "/Users/axemc/Extensions/LeetCode/go/src/leetcode/editor/cn",
-        "/Users/axemc/Extensions/LeetCode/rust/src/leetcode/editor/cn",
-    );
-    let exclude_files = vec![".DS_Store", "mod.rs"];
-    let mut file_list = collect_file_info(&exclude_files, go_path);
-    file_list.append(&mut collect_file_info(&exclude_files, rust_path));
+    let mut file_list = collect_file_info(&EXCLUDE_FILES, GO_PATH);
+    file_list.append(&mut collect_file_info(&EXCLUDE_FILES, RUST_PATH));
     return file_list;
 }
 
 #[allow(dead_code)]
-fn collect_file_info(exclude_files: &Vec<&str>, path: &str) -> Vec<String> {
+fn collect_file_info(exclude_files: &[&str; 2], path: &str) -> Vec<String> {
     let mut file_list = vec![];
     for file in std::fs::read_dir(path).unwrap() {
         match file {

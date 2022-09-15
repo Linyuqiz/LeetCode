@@ -25,4 +25,4 @@ ${question.code}
 
 ## Limit Number
 
-### 1528
+### 999
