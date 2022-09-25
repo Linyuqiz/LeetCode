@@ -5,7 +5,10 @@ mod tests {
 
     #[test]
     fn test() {
-        println!("1、two_sum");
+        let nums = vec![2, 7, 11, 15];
+        let target = 9;
+        let result = Solution::two_sum(nums, target);
+        println!("result: {:?}", result);
     }
 }
 
@@ -16,14 +19,12 @@ struct Solution;
 impl Solution {
     #[allow(dead_code)]
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut hash = std::collections::HashMap::<i32, i32>::new();
+        let mut map = std::collections::HashMap::new();
         for (i, v) in nums.iter().enumerate() {
-            // 注意：fn 的入参是值还是值的引用
-            if let Some(k) = hash.get(&(target - v)) {
+            if let Some(k) = map.get(&(target - v)) {
                 return vec![*k, i as i32];
             }
-            // 这是个坑！没有加结尾的分号：hash.insert(*v, i as i32)
-            hash.insert(*v, i as i32);
+            map.insert(*v, i as i32);
         }
         return vec![];
     }
