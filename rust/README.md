@@ -26,11 +26,3 @@ struct Solution;
 
 ${question.code}
 ```
-
-## Topic Sort
-
-### Array
-
-## Limit Number
-
-### 999
