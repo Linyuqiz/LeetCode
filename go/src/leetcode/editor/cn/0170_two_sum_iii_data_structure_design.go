@@ -6,24 +6,24 @@ func main() {
 
 // leetcode submit region begin(Prohibit modification and deletion)
 type TwoSum struct {
-	S []int
+	L []int
 	M map[int]int
 }
 
 func Constructor() TwoSum {
 	return TwoSum{
-		S: make([]int, 0),
+		L: make([]int, 0),
 		M: make(map[int]int),
 	}
 }
 
 func (this *TwoSum) Add(number int) {
-	this.S = append(this.S, number)
-	this.M[number] = len(this.S) - 1
+	this.L = append(this.L, number)
+	this.M[number] = len(this.L) - 1
 }
 
 func (this *TwoSum) Find(value int) bool {
-	for i, v := range this.S {
+	for i, v := range this.L {
 		t := value - v
 		if j, o := this.M[t]; o && i != j {
 			return true

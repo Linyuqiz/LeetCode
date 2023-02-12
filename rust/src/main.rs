@@ -54,6 +54,7 @@ fn diff_file() {
 fn collect_diff_files() -> Vec<String> {
     let mut file_list = collect_file_info(&EXCLUDE_FILES, GO_PATH);
     file_list.append(&mut collect_file_info(&EXCLUDE_FILES, RUST_PATH));
+    file_list.sort();
     return file_list;
 }
 
