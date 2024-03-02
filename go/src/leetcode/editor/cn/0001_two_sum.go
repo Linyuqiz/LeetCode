@@ -6,14 +6,15 @@ func main() {
 
 // leetcode submit region begin(Prohibit modification and deletion)
 func twoSum(nums []int, target int) []int {
-	m := make(map[int]int)
+	numberMap := make(map[int]int, 0)
+
 	for i, v := range nums {
-		t := target - v
-		if r, o := m[v]; o {
-			return []int{r, i}
+		if j, ok := numberMap[target-v]; ok {
+			return []int{j, i}
 		}
-		m[t] = i
+		numberMap[v] = i
 	}
+
 	return []int{}
 }
 
