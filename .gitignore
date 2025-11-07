@@ -15,6 +15,7 @@
 # vendor/
 
 .idea
+CLAUDE.md
 
 go/src/leetcode/editor/cn/doc
 rust/src/leetcode/editor/cn/doc

@@ -32,11 +32,11 @@ pub mod radix_sort;
 
 // 十大搜索算法 Rust 实现
 // 1. 线性搜索 linear_search
-#[path = "./search/linear_search.rs"]
-pub mod linear_search;
+// #[path = "./search/linear_search.rs"]
+// pub mod linear_search;
 // 2. 二分查找 binary_search
 #[path = "./search/binary_search.rs"]
 pub mod binary_search;
 // 3. 哈希表查找 hash_table_search
-#[path = "./search/hash_table_search.rs"]
-pub mod hash_table_search;
+// #[path = "./search/hash_table_search.rs"]
+// pub mod hash_table_search;
